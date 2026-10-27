@@ -15,6 +15,10 @@ use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Dashboard\BalanceController;
+use App\Http\Controllers\Dashboard\BillingController;
+use App\Http\Controllers\Dashboard\OrdersController;
+use App\Http\Controllers\Dashboard\TicketsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ServicePageController;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +67,35 @@ Route::get('/{slug}', ServicePageController::class)
         'website-design',
     ])
     ->name('page.show');
+
+/*
+ * Customer dashboard. Any signed-in user; every query inside is
+ * scoped to the account (by user id or order email).
+ */
+Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function (): void {
+    Route::redirect('/', '/dashboard/orders')->name('home');
+
+    // Orders + per-order conversation
+    Route::get('/orders', [OrdersController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{order}/chat', [OrdersController::class, 'chat'])->name('orders.chat');
+    Route::post('/orders/{order}/chat', [OrdersController::class, 'sendChat'])->name('orders.chat.send');
+
+    // Support tickets + thread replies
+    Route::get('/tickets', [TicketsController::class, 'index'])->name('tickets.index');
+    Route::post('/tickets', [TicketsController::class, 'store'])->name('tickets.store');
+    Route::get('/tickets/{ticket}', [TicketsController::class, 'show'])->name('tickets.show');
+    Route::post('/tickets/{ticket}/replies', [TicketsController::class, 'reply'])->name('tickets.reply');
+
+    // Balance, billing & invoices
+    Route::get('/balance', [BalanceController::class, 'index'])->name('balance');
+    Route::get('/billing', [BillingController::class, 'index'])->name('billing.index');
+    Route::get('/billing/{invoice}', [BillingController::class, 'show'])->name('billing.show');
+
+    // Profile settings (updates reuse the shared auth methods)
+    Route::get('/profile', [AuthController::class, 'showProfile'])->name('profile');
+    Route::put('/profile', [AuthController::class, 'updateProfile'])->name('profile.update');
+    Route::put('/profile/password', [AuthController::class, 'changePassword'])->name('profile.password');
+});
 
 /*
  * Admin workspace. Everything behind auth + the admin role check.

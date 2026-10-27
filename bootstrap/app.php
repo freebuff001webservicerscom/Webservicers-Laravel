@@ -19,10 +19,14 @@ return Application::configure(basePath: dirname(__DIR__))
         // stylesheets and scripts are not blocked as mixed content.
         $middleware->trustProxies(at: '*');
 
-        // Auth redirects: guests go to the sign-in screen, signed-in users
-        // land in the admin workspace.
+        // Auth redirects: guests go to the sign-in screen; signed-in admins
+        // land in the workspace and regular customers in their dashboard.
         $middleware->redirectGuestsTo(fn () => route('login'));
-        $middleware->redirectUsersTo(fn () => route('admin.overview'));
+        $middleware->redirectUsersTo(function (): string {
+            $user = auth()->user();
+
+            return $user !== null ? route($user->homeRoute()) : route('dashboard.home');
+        });
 
         // Settings → Maintenance mode takes the public site down.
         $middleware->web(append: [MaintenanceMode::class]);

@@ -16,8 +16,8 @@ class AuthController extends Controller
      */
     public function showLogin(): View|RedirectResponse
     {
-        if (Auth::check()) {
-            return redirect()->route('admin.overview');
+        if ($user = Auth::user()) {
+            return redirect()->route($user->homeRoute());
         }
 
         return view('auth.login');
@@ -45,7 +45,7 @@ class AuthController extends Controller
 
         Activity::record('login', 'Signed in from '.$request->ip());
 
-        return redirect()->intended(route('admin.overview'));
+        return redirect()->intended(route(Auth::user()->homeRoute()));
     }
 
     /**
@@ -100,5 +100,15 @@ class AuthController extends Controller
         Activity::record('profile.updated', 'Profile details updated');
 
         return back()->with('status', 'Profile updated.');
+    }
+
+    /**
+     * Show the account's profile settings (Dashboard → Profile).
+     */
+    public function showProfile(Request $request): View
+    {
+        return view('dashboard.profile', [
+            'user' => $request->user(),
+        ]);
     }
 }

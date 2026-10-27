@@ -53,4 +53,31 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class, 'customer_email', 'email');
     }
+
+    /** @return HasMany<Ticket, $this> */
+    public function tickets(): HasMany
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
+    /** @return HasMany<Invoice, $this> */
+    public function invoices(): HasMany
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
+    /** @return HasMany<WalletEntry, $this> */
+    public function walletEntries(): HasMany
+    {
+        return $this->hasMany(WalletEntry::class);
+    }
+
+    /**
+     * Where this user lands after signing in (and whenever an
+     * authenticated user hits a guest-only page).
+     */
+    public function homeRoute(): string
+    {
+        return $this->isAdmin() ? 'admin.overview' : 'dashboard.home';
+    }
 }

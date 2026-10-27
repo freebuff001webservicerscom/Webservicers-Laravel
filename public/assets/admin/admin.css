@@ -825,3 +825,37 @@ body.side-collapsed .side-foot { justify-content: center; flex-wrap: wrap; gap: 
   .bar-row { grid-template-columns: 92px minmax(0, 1fr) 66px; gap: 9px; }
   .crumbline .crumb-hide { display: none; }
 }
+
+/* ---------------- customer dashboard: chat & composer ---------------- */
+
+.chat-list { display: flex; flex-direction: column; gap: 16px; padding: 6px 2px; }
+.chat-row { display: flex; gap: 10px; max-width: 86%; }
+.chat-row.mine { align-self: flex-end; flex-direction: row-reverse; }
+.chat-avatar {
+  width: 34px; height: 34px; border-radius: 11px; flex: 0 0 auto;
+  display: grid; place-items: center; overflow: hidden;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .02em;
+  background: var(--accent-soft); color: var(--accent);
+}
+.chat-row.mine .chat-avatar { background: var(--dark); color: #fff; }
+.chat-msg { min-width: 0; }
+.chat-bubble {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 4px 14px 14px 14px; padding: 10px 14px;
+  font-size: 14px; line-height: 1.6; white-space: pre-wrap; word-break: break-word;
+}
+.chat-row.mine .chat-bubble { background: var(--dark); border-color: var(--dark); color: #fff; border-radius: 14px 4px 14px 14px; }
+.chat-meta { font-size: 11.5px; color: var(--muted); margin-top: 5px; }
+.chat-row.mine .chat-meta { text-align: right; color: var(--muted); }
+.chat-composer { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--border-2); padding-top: 16px; margin-top: 4px; }
+.chat-composer textarea { width: 100%; min-height: 84px; resize: vertical; }
+.chat-composer .chat-send { display: flex; justify-content: flex-end; gap: 10px; }
+
+/* ---------------- customer dashboard: misc ---------------- */
+
+.money-in { color: var(--delta-up); font-weight: 600; }
+.money-out { color: var(--danger); font-weight: 600; }
+.invoice-sheet { display: grid; gap: 18px; }
+.invoice-top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.invoice-lines td { padding: 12px 0; border-bottom: 1px solid var(--border-2); }
+.invoice-total { display: flex; justify-content: space-between; align-items: center; padding-top: 6px; font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: -.02em; }

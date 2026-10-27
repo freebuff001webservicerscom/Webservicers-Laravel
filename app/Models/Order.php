@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
@@ -38,5 +39,11 @@ class Order extends Model
     public function scopeBetween(Builder $query, string $from, string $to): Builder
     {
         return $query->whereBetween('placed_on', [$from, $to]);
+    }
+
+    /** @return HasMany<OrderMessage, $this> */
+    public function messages(): HasMany
+    {
+        return $this->hasMany(OrderMessage::class);
     }
 }
