@@ -1,0 +1,4 @@
+/freebuff-sites-build/
+/artifacts/
+__pycache__/
+*.pyc

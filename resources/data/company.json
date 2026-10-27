@@ -1,0 +1,479 @@
+{
+  "company": {
+    "about": {
+      "title": "About us — WebServicers",
+      "desc": "A small senior team building websites and marketing for businesses that deserve to look bigger.",
+      "eyebrow": "About us",
+      "h1": "We make small businesses look big.",
+      "lead": "WebServicers is a team of designers, developers and marketers who build the online presence your business deserves — without the agency bloat, the jargon or the endless discovery phases.",
+      "stats": [
+        [
+          "212",
+          "businesses launched"
+        ],
+        [
+          "10",
+          "years in business"
+        ],
+        [
+          "38",
+          "specialists"
+        ],
+        [
+          "4.9/5",
+          "client rating"
+        ]
+      ],
+      "story_title": "Built by people who got tired of agency bloat",
+      "story": [
+        "We started in 2016 with a simple frustration: small businesses were being sold six-month strategies when they needed a website, a phone number and customers by Friday.",
+        "So we built a different kind of studio. One senior team, one monthly fee, and a website live in a fortnight. Our first ten clients came from a single street of independent shops. Most of them are still with us."
+      ],
+      "story_tiles": true,
+      "values_title": "What we believe",
+      "values": [
+        [
+          "users",
+          "No middlemen",
+          "You talk directly to the designer, developer and marketer doing the work."
+        ],
+        [
+          "bolt",
+          "Craft over templates",
+          "Every site starts from your business, not a theme with the logo swapped."
+        ],
+        [
+          "chart",
+          "Numbers, not vibes",
+          "We report what changed, what it earned and what we are doing next."
+        ],
+        [
+          "heart",
+          "Partners, not vendors",
+          "Most clients stay for years. We plan our work around that."
+        ]
+      ],
+      "team_title": "The people doing the work",
+      "team": [
+        [
+          "Maya Chen",
+          "Head of Design",
+          "Previously at a global brand studio, now making local shops look sharper than their competitors.",
+          "MC"
+        ],
+        [
+          "Jonas Berg",
+          "Paid Media Lead",
+          "Has spent $40M of other people's money on ads and returns it with interest.",
+          "JB"
+        ],
+        [
+          "Priya Raman",
+          "SEO Strategist",
+          "Believes a good page beats a clever trick, every single time.",
+          "PR"
+        ],
+        [
+          "Sam Okafor",
+          "Client Success",
+          "The person who answers your message within the hour, usually with a solution.",
+          "SO"
+        ]
+      ],
+      "cta_h2": "Let's build something you're proud of",
+      "cta_copy": "Tell us about your business. We will tell you honestly what it needs — and what it does not."
+    },
+    "careers": {
+      "title": "Careers — WebServicers",
+      "desc": "Join a small senior team building websites and marketing for small businesses.",
+      "eyebrow": "Careers",
+      "h1": "Do the best work of your career, for people who need it most.",
+      "lead": "We are 38 people strong, fully remote across Europe, and deliberately small. You will work directly with clients, own outcomes and see your ideas on a live site within days.",
+      "perks_title": "Why people stay",
+      "perks": [
+        [
+          "globe",
+          "Remote by default",
+          "Work from anywhere within two hours of CET. We meet in person twice a year."
+        ],
+        [
+          "clock",
+          "Four-day summer",
+          "July and August are four-day weeks. Nobody has ever been busier for it."
+        ],
+        [
+          "bolt",
+          "Learn on the job",
+          "A yearly budget for courses, conferences and any tool that makes your work better."
+        ],
+        [
+          "heart",
+          "Real ownership",
+          "Every role owns a number and the decisions that move it."
+        ]
+      ],
+      "jobs_title": "Open roles",
+      "jobs": [
+        [
+          "Senior Product Designer",
+          "Design",
+          "Remote (EU)",
+          "Full-time"
+        ],
+        [
+          "Paid Social Specialist",
+          "Growth",
+          "Remote (EU)",
+          "Full-time"
+        ],
+        [
+          "SEO Strategist",
+          "Growth",
+          "Copenhagen / Remote",
+          "Full-time"
+        ],
+        [
+          "Frontend Developer",
+          "Engineering",
+          "Remote (EU)",
+          "Full-time"
+        ],
+        [
+          "Client Success Manager",
+          "Client team",
+          "Copenhagen",
+          "Full-time"
+        ]
+      ],
+      "cta_h2": "Nothing fits, but you're great?",
+      "cta_copy": "Send us a short note about the work you want to do. We keep good people in mind."
+    },
+    "press": {
+      "title": "Press & Media — WebServicers",
+      "desc": "Press releases, brand assets and media contact for WebServicers.",
+      "eyebrow": "Press & Media",
+      "h1": "The story behind the small business growth studio.",
+      "lead": "For interviews, data from our client base or brand assets, our team is happy to help. We usually reply within one working day.",
+      "releases": [
+        [
+          "October 2026",
+          "WebServicers launches free growth audits for local shops",
+          "A new no-cost audit covers site speed, search visibility and advertising spend, aimed at businesses with fewer than 20 employees."
+        ],
+        [
+          "June 2026",
+          "Studio passes 200 businesses launched",
+          "Ten years in, the team has now shipped more than 200 websites, with a median launch time of nine days."
+        ],
+        [
+          "February 2026",
+          "New analytics practice connects ad spend to booked jobs",
+          "The studio now offers CRM-linked attribution so clients can see the revenue behind every channel."
+        ],
+        [
+          "September 2025",
+          "Google Premier Partner status renewed for the fifth year",
+          "Recognition covers search, shopping and measurement specialisations across the EEA and UK."
+        ]
+      ],
+      "cta_h2": "Working on a story?",
+      "cta_copy": "Tell us what you need and the deadline. We can usually find a founder, a client or a useful number."
+    },
+    "help": {
+      "title": "Help & Support — WebServicers",
+      "desc": "Answers about websites, SEO, advertising, plans and billing.",
+      "eyebrow": "Help centre",
+      "h1": "How can we help?",
+      "lead": "Search the help centre or browse by topic. Most answers take less than a minute to find — and a human is one message away.",
+      "topics": [
+        [
+          "bolt",
+          "Getting started",
+          "Onboarding, access and your first 14 days.",
+          "12 articles"
+        ],
+        [
+          "globe",
+          "Websites",
+          "Builds, edits, hosting and domains.",
+          "24 articles"
+        ],
+        [
+          "search",
+          "SEO",
+          "Rankings, audits and content plans.",
+          "18 articles"
+        ],
+        [
+          "target",
+          "Advertising",
+          "Google, Meta and creative approvals.",
+          "21 articles"
+        ],
+        [
+          "wallet",
+          "Plans & billing",
+          "Invoices, upgrades and cancellation.",
+          "9 articles"
+        ],
+        [
+          "shield",
+          "Account & security",
+          "Logins, access and data requests.",
+          "7 articles"
+        ]
+      ],
+      "articles": [
+        [
+          "How do I request a change to my website?",
+          "Websites · 2 min read"
+        ],
+        [
+          "Where can I see my ad spend and results?",
+          "Advertising · 3 min read"
+        ],
+        [
+          "How do I connect my Google Ads account?",
+          "Advertising · 4 min read"
+        ],
+        [
+          "Can I pause my plan for a month?",
+          "Plans & billing · 1 min read"
+        ],
+        [
+          "How long does SEO take to show results?",
+          "SEO · 3 min read"
+        ]
+      ],
+      "cta_h2": "Still stuck?",
+      "cta_copy": "Send us a message and a real person will answer — usually within one working hour."
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service — WebServicers",
+      "desc": "The terms that apply to our websites, marketing services and subscriptions.",
+      "eyebrow": "Legal",
+      "h1": "Terms of Service",
+      "lead": "These terms explain what you can expect from us, what we expect from you, and how our subscription works. Plain language, no tricks.",
+      "updated": "Last updated: 1 October 2026",
+      "sections": [
+        [
+          "Agreement to these terms",
+          [
+            "By using our website or subscribing to any of our services, you agree to these terms. If you are agreeing on behalf of a company, you confirm that you have authority to do so.",
+            "If anything here is unclear, contact us before you subscribe. We would rather explain it than have you sign something you do not understand."
+          ]
+        ],
+        [
+          "Our services",
+          [
+            "We provide website design and hosting, search engine optimisation, paid advertising management, local listing management and marketing analytics.",
+            "Each service page describes what is included in each plan. Anything not listed is out of scope unless we agree it in writing — a quick email is enough."
+          ]
+        ],
+        [
+          "Accounts and access",
+          [
+            "You are responsible for keeping your login details secure and for the accuracy of the information you give us.",
+            "Where we need access to a platform such as Google Ads or Meta Business Suite, we will ask you to add us as a user. You keep ownership of every account and may remove our access at any time."
+          ]
+        ],
+        [
+          "Fees and payment",
+          [
+            "Subscription fees are billed monthly in advance. Ad spend is separate and is paid directly to the advertising platform.",
+            "Invoices are due within seven days. Late payments may pause work after a written reminder. We do not charge interest without telling you first."
+          ]
+        ],
+        [
+          "Your responsibilities",
+          [
+            "You agree to provide materials we reasonably need — brand assets, copy, access and approvals — within agreed timelines.",
+            "You confirm that content you supply does not infringe anyone else's rights and complies with the advertising policies of the platforms we use.",
+            "Delays caused by missing materials may shift delivery dates. We will always tell you when that happens."
+          ]
+        ],
+        [
+          "Intellectual property",
+          [
+            "Once an invoice is paid, you own the final website design, content and creative we produced for you.",
+            "We keep ownership of our internal tools, templates, frameworks and any pre-existing material, and license them to you for use with your project.",
+            "We may feature the finished work in our portfolio unless you ask us not to in writing."
+          ]
+        ],
+        [
+          "Cancellation and refunds",
+          [
+            "Subscriptions are month to month. You can cancel at any time with effect from the end of the current billing period.",
+            "Work completed before cancellation remains payable. Setup fees are non-refundable once work has started.",
+            "On cancellation we will export your website files and content and hand over any accounts we created for you."
+          ]
+        ],
+        [
+          "Availability and liability",
+          [
+            "We aim for 99.9% hosting availability but cannot guarantee uninterrupted service. Scheduled maintenance is announced in advance where possible.",
+            "We are not liable for indirect or consequential losses, including lost profit. Our total liability in any month is limited to the fees paid in that month.",
+            "Nothing in these terms limits liability that cannot be limited by law."
+          ]
+        ],
+        [
+          "Changes to these terms",
+          [
+            "We may update these terms to reflect changes in our services or the law. Material changes are announced by email at least 30 days before they take effect.",
+            "Continuing to use the service after a change means you accept the updated terms."
+          ]
+        ],
+        [
+          "Contact",
+          [
+            "Questions about these terms can be sent to legal@webservicers.com or by post to our registered office. We aim to reply within five working days."
+          ]
+        ]
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy — WebServicers",
+      "desc": "How we collect, use and protect personal data.",
+      "eyebrow": "Legal",
+      "h1": "Privacy Policy",
+      "lead": "We collect as little as possible, keep it for as short a time as we can, and never sell it. This policy explains the details.",
+      "updated": "Last updated: 1 October 2026",
+      "sections": [
+        [
+          "Who we are",
+          [
+            "WebServicers is the data controller for the personal data described in this policy. You can reach our privacy team at privacy@webservicers.com.",
+            "If you are a client, we may also process personal data on your behalf — for example, when you send us a customer list for advertising. In that case you are the controller and we act as your processor."
+          ]
+        ],
+        [
+          "Information we collect",
+          [
+            "Contact details you give us, such as name, email address, phone number and company.",
+            "Billing details, including invoice address and payment records. Card details are handled by our payment provider and never stored on our servers.",
+            "Usage data, such as pages viewed, approximate location and device type, collected through analytics.",
+            "Project data, including files, feedback and messages you share while working with us."
+          ]
+        ],
+        [
+          "How we use your information",
+          [
+            "To deliver the services you have purchased and to communicate about your account.",
+            "To improve our website and services, using aggregated analytics rather than individual tracking.",
+            "To send marketing emails you have asked for. Every email includes a one-click unsubscribe link.",
+            "To meet legal, tax and accounting obligations."
+          ]
+        ],
+        [
+          "Cookies and analytics",
+          [
+            "We use essential cookies to keep the site working and, with your consent, analytics cookies to understand which pages are useful.",
+            "You can change your choice at any time through the cookie settings link in the footer. Rejecting analytics does not affect your ability to use the site."
+          ]
+        ],
+        [
+          "Sharing",
+          [
+            "We share data with service providers who help us operate: hosting, email, payments and analytics. Each is bound by a data processing agreement.",
+            "We may share data where required by law or to protect our legal rights.",
+            "We never sell personal data. We do not share your customer lists with third parties for their own marketing."
+          ]
+        ],
+        [
+          "Retention",
+          [
+            "Client project data is kept for the duration of the relationship and for seven years afterwards to meet accounting requirements.",
+            "Marketing contacts are kept until you unsubscribe, plus a short suppression period to make sure we do not contact you again.",
+            "Analytics data is retained for 14 months in an aggregated form."
+          ]
+        ],
+        [
+          "Your rights",
+          [
+            "You can request access to your data, correct it, delete it, restrict processing or receive it in a portable format.",
+            "You can object to direct marketing at any time, and we will stop immediately.",
+            "To exercise any right, email privacy@webservicers.com. We respond within 30 days and will never charge for a reasonable request."
+          ]
+        ],
+        [
+          "International transfers",
+          [
+            "Some providers process data outside the EEA. Where that happens, transfers are protected by Standard Contractual Clauses and additional safeguards.",
+            "You can request a copy of the relevant safeguards from our privacy team."
+          ]
+        ],
+        [
+          "Children",
+          [
+            "Our services are intended for businesses. We do not knowingly collect personal data from anyone under 16. If you believe a child has provided data, contact us and we will delete it."
+          ]
+        ],
+        [
+          "Contact and complaints",
+          [
+            "Contact privacy@webservicers.com with any question about this policy.",
+            "You also have the right to complain to your local data protection authority. We would appreciate the chance to resolve the issue first."
+          ]
+        ]
+      ]
+    }
+  },
+  "pricing_plans": [
+    [
+      "google-search-ads",
+      "Search ads",
+      "From $149/mo",
+      "Search"
+    ],
+    [
+      "google-shopping-ads",
+      "Shopping ads",
+      "From $249/mo",
+      "Retail"
+    ],
+    [
+      "facebook-ads",
+      "Facebook ads",
+      "From $149/mo",
+      "Social"
+    ],
+    [
+      "instagram-ads",
+      "Instagram ads",
+      "From $149/mo",
+      "Social"
+    ],
+    [
+      "seo",
+      "SEO Tool",
+      "From $199/mo",
+      "Organic"
+    ],
+    [
+      "google-my-business",
+      "Google My Business",
+      "From $49/mo",
+      "Local"
+    ],
+    [
+      "marketing-analytics",
+      "Marketing Analytics",
+      "From $99/mo",
+      "Data"
+    ],
+    [
+      "website",
+      "Website",
+      "From $19/mo",
+      "Presence"
+    ],
+    [
+      "website-design",
+      "Website Design",
+      "From $149/mo",
+      "Design"
+    ]
+  ]
+}
