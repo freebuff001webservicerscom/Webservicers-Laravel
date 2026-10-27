@@ -46,9 +46,7 @@ class User extends Authenticatable
         return $query->where('role', 'admin');
     }
 
-    /**
-     * @return HasMany<Order, $this>
-     */
+    /** @return HasMany<Order, $this> */
     public function orders(): HasMany
     {
         return $this->hasMany(Order::class, 'customer_email', 'email');
@@ -72,12 +70,9 @@ class User extends Authenticatable
         return $this->hasMany(WalletEntry::class);
     }
 
-    /**
-     * Where this user lands after signing in (and whenever an
-     * authenticated user hits a guest-only page).
-     */
+    /** Where this user lands after signing in (and whenever an authenticated user hits a guest-only page). */
     public function homeRoute(): string
     {
-        return $this->isAdmin() ? 'admin.overview' : 'dashboard.home';
+        return $this->isAdmin() ? 'admin.overview' : 'app.home';
     }
 }

@@ -83,9 +83,9 @@
         </div>
 
         <div class="price-grid">
-            @foreach ($page['pricing']['tiers'] as $index => $tier)
-                <article class="price-card{{ $index === 1 ? ' price-card--featured' : '' }}">
-                    @if ($index === 1)<span class="price-ribbon">Most popular</span>@endif
+            @foreach ($page['pricing']['tiers'] as $key => $tier)
+                <article class="price-card{{ $key === 1 ? ' price-card--featured' : '' }}">
+                    @if ($key === 1)<span class="price-ribbon">Most popular</span>@endif
                     <p class="price-name">{{ $tier['name'] }}</p>
                     <p class="price-amount">{{ $tier['price'] }}<small>{{ $tier['period'] }}</small></p>
                     <p class="price-note">{{ $tier['note'] }}</p>
@@ -94,7 +94,7 @@
                             <li>{{ $feature }}</li>
                         @endforeach
                     </ul>
-                    <a class="btn {{ $index === 1 ? 'btn-primary' : 'btn-outline' }}" href="{{ route('home') }}#get-started">{{ $tier['cta'] }}</a>
+                    <a class="btn {{ $key === 1 ? 'btn-primary' : 'btn-outline' }}" href="{{ route('home') }}#get-started">{{ $tier['cta'] }}</a>
                 </article>
             @endforeach
         </div>
@@ -126,11 +126,11 @@
         </div>
 
         <div class="feature-grid">
-            @foreach ($page['features']['items'] as [$key, $title, $text])
+            @foreach ($page['features']['items'] as $item)
                 <article class="feature" data-reveal>
-                    <span class="feature-icon">@include('partials.icon', ['name' => $key])</span>
-                    <h3>{{ $title }}</h3>
-                    <p>{{ $text }}</p>
+                    <span class="feature-icon">@include('partials.icon', ['name' => $item[0]])</span>
+                    <h3>{{ $item[1] }}</h3>
+                    <p>{{ $item[2] }}</p>
                 </article>
             @endforeach
         </div>

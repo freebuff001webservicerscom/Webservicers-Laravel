@@ -70,7 +70,7 @@
                 </div>
                 <div class="dropdown-footer">
                   <p>Ready to grow? Our experts handle the marketing.</p>
-                  <a class="btn btn-white btn-sm" href="{{ route('contact') }}">Talk to an expert</a>
+                  <a class="btn btn-white btn-sm" href="{{ route('contact.store') }}">Talk to an expert</a>
                 </div>
               </div>
             </li>
@@ -95,7 +95,7 @@
           </ul>
 
           <div class="nav-cta">
-            <a class="btn btn-ghost" href="{{ route('home') }}">Sign in</a>
+            <a class="btn btn-ghost" href="/login">Sign in</a>
             <a class="btn btn-primary" href="{{ route('pricing') }}">Get started</a>
           </div>
         </nav>

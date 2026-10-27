@@ -25,7 +25,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->redirectUsersTo(function (): string {
             $user = auth()->user();
 
-            return $user !== null ? route($user->homeRoute()) : route('dashboard.home');
+            return $user !== null ? route($user->homeRoute()) : route('home');
         });
 
         // Settings → Maintenance mode takes the public site down.

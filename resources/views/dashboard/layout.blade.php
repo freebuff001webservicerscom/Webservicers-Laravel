@@ -47,7 +47,7 @@
     <!-- ================= SIDEBAR ================= -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-head">
-        <a class="side-brand" href="{{ route('dashboard.home') }}">
+        <a class="side-brand" href="{{ route('app.home') }}">
           <span class="side-brand-mark" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none">
               <rect width="40" height="40" rx="12" fill="url(#wsMarkU)"/>
@@ -69,9 +69,7 @@
         <button class="icon-btn side-collapse" type="button" id="sidebarCollapse" aria-label="Collapse sidebar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg>
         </button>
-      </div>
-
-      <a class="workspace-pill" href="{{ route('dashboard.profile') }}">
+      </div>        <a class="workspace-pill" href="{{ route('app.profile') }}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.7"/><path d="M4.5 19.5c1.3-3.4 4-5.1 7.5-5.1s6.2 1.7 7.5 5.1"/></svg>
         <span>{{ auth()->user()->name }}</span>
         <svg class="ws-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9 4-4 4 4M8 15l4 4 4-4"/></svg>
@@ -122,7 +120,7 @@
         </nav>
 
         <div class="topbar-actions">
-          <a class="btn btn-dark" href="{{ route('dashboard.tickets.index') }}">
+          <a class="btn btn-dark" href="{{ route('app.tickets.index') }}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
             New ticket
           </a>

@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\CustomerController;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\OrderController;
@@ -15,34 +14,25 @@ use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ServicePageController;
 use App\Http\Controllers\Dashboard\BalanceController;
 use App\Http\Controllers\Dashboard\BillingController;
 use App\Http\Controllers\Dashboard\OrdersController;
 use App\Http\Controllers\Dashboard\TicketsController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\ServicePageController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
-// The public contact form lands in the admin workspace.
+// Public contact form lands in the admin workspace.
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-// Sign in / out.
-Route::middleware('guest')->group(function (): void {
-    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-    Route::post('/login', [AuthController::class, 'login'])->name('login.attempt');
-});
-
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
-
-/*
- * Company, legal and pricing pages.
- * Registered before the service catch-all for clarity, though the
- * catch-all is constrained to service slugs only.
- */
+// ---------------------------------------------------------------------------
+// Company, legal and pricing pages.
+// ---------------------------------------------------------------------------
 Route::controller(PageController::class)
-    ->prefix('')->group(function (): void {
+    ->prefix('')
+    ->group(function (): void {
         Route::get('/pricing', 'pricing')->name('pricing');
         Route::get('/about', 'about')->name('about');
         Route::get('/contact', 'contact')->name('contact');
@@ -54,6 +44,9 @@ Route::controller(PageController::class)
         Route::get('/sitemap', 'sitemap')->name('sitemap');
     });
 
+// ---------------------------------------------------------------------------
+// Public service + company/legal pages.
+// ---------------------------------------------------------------------------
 Route::get('/{slug}', ServicePageController::class)
     ->whereIn('slug', [
         'google-search-ads',
@@ -68,12 +61,19 @@ Route::get('/{slug}', ServicePageController::class)
     ])
     ->name('page.show');
 
-/*
- * Customer dashboard. Any signed-in user; every query inside is
+// Sign in / out.
+Route::middleware('guest')->group(function (): void {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.attempt');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
+
+/* Customer dashboard. Any signed-in user; every query inside is
  * scoped to the account (by user id or order email).
  */
-Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function (): void {
-    Route::redirect('/', '/dashboard/orders')->name('home');
+Route::middleware('auth')->prefix('app')->name('app.')->group(function (): void {
+    Route::redirect('/', '/app/orders')->name('home');
 
     // Orders + per-order conversation
     Route::get('/orders', [OrdersController::class, 'index'])->name('orders.index');
@@ -97,14 +97,12 @@ Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(functi
     Route::put('/profile/password', [AuthController::class, 'changePassword'])->name('profile.password');
 });
 
-/*
- * Admin workspace. Everything behind auth + the admin role check.
- */
+/* Admin workspace. /admin = signed-in admins only (role check + auth). */
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function (): void {
     Route::redirect('/', '/admin/overview');
 
-    // Operate → Overview
-    Route::get('/overview', [DashboardController::class, 'overview'])->name('overview');
+    // Overview
+    Route::get('/overview', [App\Http\Controllers\Admin\DashboardController::class, 'overview'])->name('overview');
 
     // Products / store pages content
     Route::get('/products', [PageContentController::class, 'products'])->name('products.index');
@@ -135,9 +133,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
     // Reports
     foreach (['sales', 'orders', 'products', 'customers', 'returns', 'channels', 'payments', 'marketing'] as $report) {
-        Route::get('/reports/'.$report, [ReportController::class, 'show'])
+        Route::get('/reports/' . $report, [ReportController::class, 'show'])
             ->defaults('report', $report)
-            ->name('reports.'.$report);
+            ->name('reports.' . $report);
     }
 
     // Generic resource CRUD (all remaining sidebar pages)
@@ -150,12 +148,12 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
     // Settings
     foreach (['general', 'branding', 'localization', 'seo', 'maintenance', 'marketing', 'tax', 'shipping', 'notifications', 'email', 'storage', 'security'] as $settingsPage) {
-        Route::get('/settings/'.$settingsPage, [SettingsController::class, 'edit'])
+        Route::get('/settings/' . $settingsPage, [SettingsController::class, 'edit'])
             ->defaults('page', $settingsPage)
-            ->name('settings.'.$settingsPage);
-        Route::put('/settings/'.$settingsPage, [SettingsController::class, 'update'])
+            ->name('settings.' . $settingsPage);
+        Route::put('/settings/' . $settingsPage, [SettingsController::class, 'update'])
             ->defaults('page', $settingsPage)
-            ->name('settings.'.$settingsPage.'.update');
+            ->name('settings.' . $settingsPage . '.update');
     }
 
     // Team & access
